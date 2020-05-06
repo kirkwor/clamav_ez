@@ -7,7 +7,7 @@ mkdir /var/log/clamav/
 chmod +x /path/to/this/script
 ```
 
-Add an entry to contrab (5 min scanning intervals):
+Add an entry to crontab (5 min scanning intervals):
 
 ```*/5 * * * * /path/to/this/script```
 
