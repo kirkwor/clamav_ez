@@ -11,6 +11,9 @@ EMAIL_FROM="your_from_email @ domain.com";
 EMAIL_TO="your_to_email @ domain.com";
 DIRTOSCAN="/path/to/dir1 /path/to/dir2 /path/to/dir3 /path/to/dir_etc";
 
+# Checking for mail installation (replace with your mail program)
+type mail >/dev/null 2>&1 || { echo >&2 "Mail is not installed. Exiting..."; exit 1; };
+
 for D in ${DIRTOSCAN}; do
  # Find files uploaded in the last 5 minutes and execute clamscan on all results and move infected to INFECTED directory
  # Change " \+ " to " \; " to start a new clamscan for each file individually (probably not a good idea :))
