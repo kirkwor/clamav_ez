@@ -14,6 +14,9 @@ Add an entry to crontab (5 min scanning intervals):
 This script creates a new log file for each cron run, make sure you have a log rotation for that folder to remove them e.g.:
 
 ```
+/etc/logrotate.d/clamav
+```
+```
 /var/log/clamav/*.log {
         daily
         copytruncate
